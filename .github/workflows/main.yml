@@ -20,6 +20,10 @@ jobs:
         pandoc-version: '2.13' # The pandoc version to download (if necessary) and use.
     - uses: r-lib/actions/setup-tinytex@v1  # A lightweight LaTeX
 
+    - name: Add french support to the LaTeX install
+      run: |
+        tlmgr install babel-french
+
     # # If a more consistent LaTeX install is needed, the following should do it
     # - name: install latex dependencies
     #   run: |
