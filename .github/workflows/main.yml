@@ -21,7 +21,7 @@ jobs:
 
     - name: install latex dependencies
       run: |
-        sudo apt-get install texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-xetex latexmk
+        sudo apt-get install texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-xetex latexmk texlive-lang-french
 
     # Build the html, pdf and epub versions
     - name: Build the html, pdf and epub
