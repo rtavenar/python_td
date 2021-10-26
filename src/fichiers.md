@@ -109,7 +109,15 @@ lit ce fichier textuel et retourne une liste de tous ses mots, en minuscule sans
 14. En utilisant la fonction de la question précédente, écrivez une fonction 
 qui prend en entrée un nom de répertoire et retourne un dictionnaire indiquant,
 pour chaque fichier `.txt` de ce répertoire, une liste de tous ses mots, en minuscule 
-sans doublon.
+sans doublon. Le dictionnaire retourné sera ainsi 
+de la forme :
+
+```python
+{
+   "data/lemonde2.txt": ["le", ..., "tendance", ...],
+   ...
+}
+```
 
 15. En utilisant la fonction de la question précédente, écrivez une fonction 
 qui prend en entrée un nom de répertoire et retourne un dictionnaire indiquant,
