@@ -95,3 +95,31 @@ Que remarquez-vous pour le fichier `test.csv` ?
 11. Écrivez une fonction qui lit le fichier `"rando_gps.json"`{.haskell} contenu dans le répertoire `"data"`{.haskell} (ce nom de fichier ne devra pas être un paramètre de la fonction, il devra être défini "en dur" dans celle-ci) et retourne le nombre de randonnées listées dans ce fichier.
 
 12. Écrivez une fonction qui lit le fichier `"rando_gps.json"`{.haskell} contenu dans le répertoire `"data"`{.haskell} (ce nom de fichier ne devra pas être un paramètre de la fonction, il devra être défini "en dur" dans celle-ci) et retourne une liste contenant les intitulés des randonnées listées dans ce fichier.
+
+# Devoir à rendre
+
+**Cet exercice est à rendre sur CURSUS avant la prochaine séance de TD.
+Vous pouvez le rendre par binôme ou trinôme, mais dans ce cas, le nom de tous 
+les membres du groupe doit être inscrit dans le fichier python en commentaire 
+avant les imports.**
+
+13. Écrivez une fonction qui prend en entrée un nom (=chemin complet) de fichier textuel, 
+lit ce fichier textuel et retourne une liste de tous ses mots, en minuscule sans doublon.
+
+14. En utilisant la fonction de la question précédente, écrivez une fonction 
+qui prend en entrée un nom de répertoire et retourne un dictionnaire indiquant,
+pour chaque fichier `.txt` de ce répertoire, une liste de tous ses mots, en minuscule 
+sans doublon.
+
+15. En utilisant la fonction de la question précédente, écrivez une fonction 
+qui prend en entrée un nom de répertoire et retourne un dictionnaire indiquant,
+pour chaque mot présent dans au moins un fichier `.txt` de ce répertoire, la liste 
+des fichiers dans lesquels on peut le trouver. Le dictionnaire retourné sera ainsi 
+de la forme :
+
+```python
+{
+   "tendance": ["data/lemonde2.txt", "data/lequipe1.txt", ...],
+   ...
+}
+```
