@@ -160,12 +160,18 @@ Ainsi, ces flux sont utilis&#xE9;s de la m&#xEA;me mani&#xE8;re que les objets `
 <p><strong>Cet exercice est à rendre sur CURSUS avant la prochaine séance de TD. Vous pouvez le rendre par binôme ou trinôme, mais dans ce cas, le nom de tous les membres du groupe doit être inscrit dans le fichier python en commentaire avant les imports.</strong></p>
 <ol start="13" type="1">
 <li><p>Écrivez une fonction qui prend en entrée un nom (=chemin complet) de fichier textuel, lit ce fichier textuel et retourne une liste de tous ses mots, en minuscule sans doublon.</p></li>
-<li><p>En utilisant la fonction de la question précédente, écrivez une fonction qui prend en entrée un nom de répertoire et retourne un dictionnaire indiquant, pour chaque fichier <code>.txt</code> de ce répertoire, une liste de tous ses mots, en minuscule sans doublon.</p></li>
-<li><p>En utilisant la fonction de la question précédente, écrivez une fonction qui prend en entrée un nom de répertoire et retourne un dictionnaire indiquant, pour chaque mot présent dans au moins un fichier <code>.txt</code> de ce répertoire, la liste des fichiers dans lesquels on peut le trouver. Le dictionnaire retourné sera ainsi de la forme :</p></li>
+<li><p>En utilisant la fonction de la question précédente, écrivez une fonction qui prend en entrée un nom de répertoire et retourne un dictionnaire indiquant, pour chaque fichier <code>.txt</code> de ce répertoire, une liste de tous ses mots, en minuscule sans doublon. Le dictionnaire retourné sera ainsi de la forme :</p></li>
 </ol>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>   <span class="st">&quot;tendance&quot;</span>: [<span class="st">&quot;data/lemonde2.txt&quot;</span>, <span class="st">&quot;data/lequipe1.txt&quot;</span>, ...],</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>   <span class="st">&quot;data/lemonde2.txt&quot;</span>: [<span class="st">&quot;le&quot;</span>, ..., <span class="st">&quot;tendance&quot;</span>, ...],</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>   ...</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<ol start="15" type="1">
+<li>En utilisant la fonction de la question précédente, écrivez une fonction qui prend en entrée un nom de répertoire et retourne un dictionnaire indiquant, pour chaque mot présent dans au moins un fichier <code>.txt</code> de ce répertoire, la liste des fichiers dans lesquels on peut le trouver. Le dictionnaire retourné sera ainsi de la forme :</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>   <span class="st">&quot;tendance&quot;</span>: [<span class="st">&quot;data/lemonde2.txt&quot;</span>, <span class="st">&quot;data/lequipe1.txt&quot;</span>, ...],</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>   ...</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </body>
 </html>
