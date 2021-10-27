@@ -157,10 +157,15 @@ Ainsi, ces flux sont utilis&#xE9;s de la m&#xEA;me mani&#xE8;re que les objets `
 <li><p>Écrivez une fonction qui lit le fichier <code class="sourceCode haskell"><span class="st">&quot;rando_gps.json&quot;</span></code> contenu dans le répertoire <code class="sourceCode haskell"><span class="st">&quot;data&quot;</span></code> (ce nom de fichier ne devra pas être un paramètre de la fonction, il devra être défini “en dur” dans celle-ci) et retourne une liste contenant les intitulés des randonnées listées dans ce fichier.</p></li>
 </ol>
 <h1 data-number="6" id="devoir-à-rendre"><span class="header-section-number">6</span> Devoir à rendre</h1>
-<p><strong>Cet exercice est à rendre sur CURSUS avant la prochaine séance de TD. Vous pouvez le rendre par binôme ou trinôme, mais dans ce cas, le nom de tous les membres du groupe doit être inscrit dans le fichier python en commentaire avant les imports.</strong></p>
+<p><strong>Cet exercice est à rendre sur CURSUS avant la prochaine séance de TD. Vous pouvez le rendre par binôme ou trinôme, mais dans ce cas, le nom de tous les membres du groupe doit être inscrit dans le fichier python en commentaire avant les imports. Pour ces questions, vous testerez vos programmes avec des fichiers du répertoire <code>data/</code>.</strong></p>
 <ol start="13" type="1">
-<li><p>Écrivez une fonction qui prend en entrée un nom (=chemin complet) de fichier textuel, lit ce fichier textuel et retourne une liste de tous ses mots, en minuscule sans doublon.</p></li>
-<li><p>En utilisant la fonction de la question précédente, écrivez une fonction qui prend en entrée un nom de répertoire et retourne un dictionnaire indiquant, pour chaque fichier <code>.txt</code> de ce répertoire, une liste de tous ses mots, en minuscule sans doublon. Le dictionnaire retourné sera ainsi de la forme :</p></li>
+<li>Écrivez une fonction qui prend en entrée un nom (=chemin complet relatif) de fichier textuel, lit ce fichier textuel et retourne une liste de tous ses mots, en minuscule sans doublon.</li>
+</ol>
+<blockquote>
+<p><strong>Attention,</strong> on considère que les mots sont les éléments des fichiers texte séparés par des espaces, par exemple <code>&quot;l&#39;amitié&quot;</code>, <code>&quot;bonjour,&quot;</code> et <code>&quot;au revoir.\n&quot;</code> sont vus comme des mots à part entière, pas besoin de les post-traiter. De plus, on ne conservera que les mots d’au moins 5 lettres (pour éliminer les <code>&quot;le&quot;</code>, <code>&quot;la&quot;</code>, …).</p>
+</blockquote>
+<ol start="14" type="1">
+<li>En utilisant la fonction de la question précédente, écrivez une fonction qui prend en entrée un nom de répertoire et retourne un dictionnaire indiquant, pour chaque fichier <code>.txt</code> de ce répertoire, une liste de tous ses mots, en minuscule sans doublon. Le dictionnaire retourné sera ainsi de la forme :</li>
 </ol>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>{</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>   <span class="st">&quot;data/lemonde2.txt&quot;</span>: [<span class="st">&quot;le&quot;</span>, ..., <span class="st">&quot;tendance&quot;</span>, ...],</span>
