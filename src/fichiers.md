@@ -101,10 +101,13 @@ Que remarquez-vous pour le fichier `test.csv` ?
 **Cet exercice est à rendre sur CURSUS avant la prochaine séance de TD.
 Vous pouvez le rendre par binôme ou trinôme, mais dans ce cas, le nom de tous 
 les membres du groupe doit être inscrit dans le fichier python en commentaire 
-avant les imports.**
+avant les imports.
+Pour ces questions, vous testerez vos programmes avec des fichiers du répertoire `data/`.**
 
-13. Écrivez une fonction qui prend en entrée un nom (=chemin complet) de fichier textuel, 
+13. Écrivez une fonction qui prend en entrée un nom (=chemin complet relatif) de fichier textuel, 
 lit ce fichier textuel et retourne une liste de tous ses mots, en minuscule sans doublon.
+
+> **Attention,** on considère que les mots sont les éléments des fichiers texte séparés par des espaces, par exemple `"l'amitié"`, `"bonjour,"` et `"au revoir.\n"` sont vus comme des mots à part entière, pas besoin de les post-traiter. De plus, on ne conservera que les mots d'au moins 5 lettres (pour éliminer les `"le"`, `"la"`, ...).
 
 14. En utilisant la fonction de la question précédente, écrivez une fonction 
 qui prend en entrée un nom de répertoire et retourne un dictionnaire indiquant,
