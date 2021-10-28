@@ -117,7 +117,7 @@ de la forme :
 
 ```python
 {
-   "data/lemonde2.txt": ["le", ..., "tendance", ...],
+   "data/lemonde2.txt": ["tendance", ...],
    ...
 }
 ```
