@@ -26,10 +26,11 @@ format suivant :
 
 ## Installation du module `graphh`
 
+**Cette action est à effectuer une fois pour toutes sur votre machine personnelle, si vous l'utilisez en TD, ou à chaque début de TD sur une machine de l'université si vous travaillez sur un poste de l'université.**
 Par défaut, le module `graphh` n'est pas
-installé sur votre ordinateur.
+installé sur votre ordinateur ni sur les machines de l'université.
 Pour pouvoir l'utiliser, il va donc falloir commencer par l'installer.
-Pour cela, vous devrez, dans PyCharm, choisir "Fichier -> Préférences", puis dans la barre de gauche "Project" puis "Project Interpreter". Vous avez alors une liste des packages qui s'affiche et, en cliquant sur le "+" en bas à gauche, vous allez pouvoir installer `graphh`.
+Pour cela, vous devrez, dans PyCharm, choisir "Fichier -> Préférences", puis dans la barre de gauche "Project" puis "Project Interpreter". Vous avez alors une liste des packages qui s'affiche et, en cliquant sur le "+" en bas à gauche, vous allez pouvoir installer les modules `requests` et `graphh`.
 
 
 # Énoncé
