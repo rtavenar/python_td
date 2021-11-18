@@ -113,8 +113,8 @@ TraceGPS Issued  Messac - CIRCUIT DU PORT
 	- son dénivelé positif cumulé   8.97 m
 	- son dénivelé négatif cumulé   8.97 m
 TraceGPS Issued  Coemes-Retiers
-	- son dénivelé positif cumulé  73.39 m
-	- son dénivelé négatif cumulé  73.39 m
+	- son dénivelé positif cumulé  74.91 m
+	- son dénivelé négatif cumulé  74.91 m
 ```
 <!-- Il est possible que vous ayez une erreur vous indiquant que vous avez atteint
 votre quota de requêtes à l'API GraphHopper, dans ce cas, ré-essayez avec le
@@ -144,8 +144,8 @@ soit quelque chose du type :
     },
     {
         "name": "TraceGPS Issued  Coemes-Retiers",
-        "D+": 73.39,
-        "D-": 73.39
+        "D+": 74.91,
+        "D-": 74.91
     }
 ]
 ```
