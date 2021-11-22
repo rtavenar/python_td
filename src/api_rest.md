@@ -91,7 +91,7 @@ lesquels l'attribut `"precision"` vaut `"Temps réel"`.
 ces passages doivent donc être ignorés.
 
 
-4. Écrire une fonction qui prend en entrée une liste de passages
+5. Écrire une fonction qui prend en entrée une liste de passages
 tels que ceux retournés par la question précédente et un délai `t` en minutes et
 qui retourne la liste des passages qui auront lieu dans un délai de `t` minutes
 après l’instant présent. Tester cette fonction en affichant la liste des
@@ -106,7 +106,7 @@ comme demandé plus haut et contenant le code relatif à cette partie. Ce code
 devra se suffire à lui-même et devra donc contenir les éventuelles fonctions
 annexes appelées par ce code.**
 
-5. En utilisant le service
+6. En utilisant le service
 [Open Data de Rennes Métropole](https://data.rennesmetropole.fr/), écrivez une
 fonction qui affiche le nombre total de passages de vélos devant chacun des 
 compteurs installés dans Rennes, pour le mois de novembre 2021.
