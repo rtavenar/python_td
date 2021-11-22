@@ -33,7 +33,7 @@ seront listés en fin de fichier. De cette manière, vous pourrez, d'une questio
 1. Se rendre sur le [site de la STAR](https://data.explore.star.fr/explore/)
 et trouver l'API indiquant les prochains passages de métro rennais.
 Cliquez sur l'onglet "API" pour accéder aux options de requête.
-Essayez notamment d'ajouter le _facet_ `"depart"` et notez le format de date
+Essayez notamment d'ajouter le _facet_ `depart` et notez le format de date
 utilisé.
 
 > Petit point sur :
@@ -69,11 +69,11 @@ et la date de sortie doit être :
 
 3. En consultant l'interface d'édition de requêtes de l'API de la STAR (celle que vous 
 avez trouvé à la question 1), composez une requête qui permette :
-- d'afficher les attributs `"depart"`, `"destination"` et `"nomarret"` pour les résultats 
+- d'afficher les attributs `depart`, `destination` et `nomarret` pour les résultats 
 retournés (ajout de ces attributs à la liste des _facets_)
 - de ne conserver que les passages pour lesquels l'attribut `precision` vaut 
-`"Temps réel"` (valeur à spécifier dans la catégorie _refine_)
-- de forcer les dates à être spécifiées dans le fuseau horaire `"Europe/Paris"`
+`Temps réel` (valeur à spécifier dans la catégorie _refine_)
+- de forcer les dates à être spécifiées dans le fuseau horaire `Europe/Paris`
 - de retourner les 100 prochains passages.
 
 Notez l'URL générée (clic droit sur le lien du bas de la page, puis "Copier le lien").
@@ -83,9 +83,9 @@ Notez l'URL générée (clic droit sur le lien du bas de la page, puis "Copier l
 venir. Cette fonction fera une requête API, en limitant le nombre de résultats
  à 100 lignes.
 La liste retournée par cette fonction contiendra des dictionnaires composés de
-3 clés : `"depart"` (contenant l'heure de départ au format `datetime`),
-`"destination"` et `"nomarret"` et vous ne conserverez que les passages pour
-lesquels l'attribut `"precision"` vaut `"Temps réel"`.
+3 clés : `depart` (contenant l'heure de départ au format `datetime`),
+`destination` et `nomarret` et vous ne conserverez que les passages pour
+lesquels l'attribut `precision` vaut `Temps réel`.
 
 **Attention :** pour certains passages, l'attribut `"depart"` n'existe pas :
 ces passages doivent donc être ignorés.
@@ -112,7 +112,7 @@ fonction qui affiche le nombre total de passages de vélos devant chacun des
 compteurs installés dans Rennes, pour le mois de novembre 2021.
 Notez que dans l'interface utilisée, pour filtrer une date par mois 
 (c'est-à-dire ne conserver que les enregistrements pour le mois `MM` de l'année 
-`YYYY`), on peut demander que l'attribut `date` soit de la forme : `"YYYY/MM"`,
+`YYYY`), on peut demander que l'attribut `date` soit de la forme : `YYYY/MM`,
 en donnant les valeurs voulues à `YYYY` et `MM`.
 Votre fonction devra afficher une sortie de la forme :
 
