@@ -55,25 +55,31 @@ utilisé.
 > - si timezone vaut `"01:00"` il s'agit de l'heure "en France",
 > - si timezone vaut `"00:00"`, il y a une heure de retard
 
-2. Écrire une fonction qui prenne en entrée une chaîne de caractères
-représentant une date et retourne une date en ignorant la "timezone"
-(fuseau horaire, partie à partir du symbole `"+"` dans la chaîne de caractères).
+2. Écrire une fonction qui prend en entrée une chaîne de caractères
+représentant une date et retourne une date en supposant que la "timezone"
+(fuseau horaire, partie à partir du symbole `"+"` dans la chaîne de caractères)
+vaut toujours `"01:00"`.
 La date d'entrée de cette fonction devra être une chaine de caractères dont le
 modèle suit les caractéristiques de l'exemple
-suivant : `"2020-11-23T09:01:52+00:00"`{.haskell}
+suivant : `"2021-11-23T09:01:52+01:00"`{.haskell}
 et la date de sortie doit être :
 - du type date de Python (ce qui permet la réalisation de calculs, de comparaison...) ,
 - privé de timezone et
 - son horaire doit être celui de fuseau horaire français.
 
-**Attention :** vous devrez considérer deux cas de figure différents :
-    a. si la fin de la chaîne de caractères est `"+00:00"` : il faudra ajouter 1h à
-    la date extraite car le fuseau horaire n'est pas le nôtre ;
-    b. si la fin de la chaîne de caractères est `"+01:00"` : la date sera
-    considérée comme correcte.
+3. En consultant l'interface d'édition de requêtes de l'API de la STAR (celle que vous 
+avez trouvé à la question 1), composez une requête qui permette :
+- d'afficher les attributs `"depart"`, `"destination"` et `"nomarret"` pour les résultats 
+retournés (ajout de ces attributs à la liste des _facets_)
+- de ne conserver que les passages pour lesquels l'attribut `precision` vaut 
+`"Temps réel"` (valeur à spécifier dans la catégorie _refine_)
+- de forcer les dates à être spécifiées dans le fuseau horaire `"Europe/Paris"`
+- de retourner les 100 prochains passages.
+
+Notez l'URL générée (clic droit sur le lien du bas de la page, puis "Copier le lien").
 
 
-3. Écrire une fonction qui retourne la liste de tous les passages de métro à
+4. Écrire une fonction qui retourne la liste de tous les passages de métro à
 venir. Cette fonction fera une requête API, en limitant le nombre de résultats
  à 100 lignes.
 La liste retournée par cette fonction contiendra des dictionnaires composés de
@@ -82,10 +88,10 @@ La liste retournée par cette fonction contiendra des dictionnaires composés de
 lesquels l'attribut `"precision"` vaut `"Temps réel"`.
 
 **Attention :** pour certains passages, l'attribut `"depart"` n'existe pas :
-ces passages doivent donc être ignorés
+ces passages doivent donc être ignorés.
 
 
-4. Écrire une fonction qui prenne en entrée une liste de passages
+4. Écrire une fonction qui prend en entrée une liste de passages
 tels que ceux retournés par la question précédente et un délai `t` en minutes et
 qui retourne la liste des passages qui auront lieu dans un délai de `t` minutes
 après l’instant présent. Tester cette fonction en affichant la liste des
@@ -102,9 +108,15 @@ annexes appelées par ce code.**
 
 5. En utilisant le service
 [Open Data de Rennes Métropole](https://data.rennesmetropole.fr/), écrivez une
-fonction qui affiche l'état de la circulation dans la rue de Vezin, et plus
-précisément, le nombre de points dans cette rue pour lesquels le traffic est
-fluide (`"freeFlow"`) et le nombre de points pour lesquels le traffic est
-chargé (`"congested"` ou `"heavy"`).
-Votre fonction devra s'assurer que les données récoltées sont récentes
-(datent toutes de moins de 2h) et afficher un message d'erreur si ce n'est pas le cas.
+fonction qui affiche le nombre total de passages de vélos devant chacun des 
+compteurs installés dans Rennes, pour le mois de novembre 2021.
+Notez que dans l'interface utilisée, pour filtrer une date par mois 
+(c'est-à-dire ne conserver que les enregistrements pour le mois `MM` de l'année 
+`YYYY`), on peut demander que l'attribut `date` soit de la forme : `"YYYY/MM"`,
+en donnant les valeurs voulues à `YYYY` et `MM`.
+Votre fonction devra afficher une sortie de la forme :
+
+```
+Le compteur Eco-Display Place de Bretagne a vu passer 48827 vélos en novembre 2021.
+Le compteur Rennes Rue d'Isly V1 a vu passer 20703 vélos en novembre 2021.
+```
