@@ -34,7 +34,8 @@ seront listés en fin de fichier. De cette manière, vous pourrez, d'une questio
 et trouver l'API indiquant les prochains passages de métro rennais.
 Cliquez sur l'onglet "API" pour accéder aux options de requête.
 Essayez notamment d'ajouter le _facet_ `depart` et notez le format de date
-utilisé.
+utilisé (un _facet_ est un attribut dont on demande explicitement qu'il soit 
+présent dans la réponse pour tous les résultats retournés).
 
 > Petit point sur :
 >
@@ -55,14 +56,10 @@ utilisé.
 > - si timezone vaut `"01:00"` il s'agit de l'heure "en France",
 > - si timezone vaut `"00:00"`, il y a une heure de retard
 
-2. Écrire une fonction qui prend en entrée une chaîne de caractères
-représentant une date et retourne une date en supposant que la "timezone"
-(fuseau horaire, partie à partir du symbole `"+"` dans la chaîne de caractères)
-vaut toujours `"01:00"`.
-La date d'entrée de cette fonction devra être une chaine de caractères dont le
-modèle suit les caractéristiques de l'exemple
-suivant : `"2021-11-23T09:01:52+01:00"`{.haskell}
-et la date de sortie doit être :
+2. Écrire une fonction qui prend en entrée une chaîne de caractères 
+représentant une date dans le format vu à la requête précédente (exemples : 
+`"2021-11-25T09:01:52+01:00"`  ou `"2021-11-25T09:01:52+00:00"`)
+et retourne une date de sortie ayant les caractéristiques suivantes:
 - du type date de Python (ce qui permet la réalisation de calculs, de comparaison...) ,
 - privé de timezone et
 - son horaire doit être celui de fuseau horaire français.
@@ -77,6 +74,16 @@ retournés (ajout de ces attributs à la liste des _facets_)
 - de retourner les 100 prochains passages.
 
 Notez l'URL générée (clic droit sur le lien du bas de la page, puis "Copier le lien").
+
+**Pour les questions suivantes, il est conseillé d'importer le module `pprint` qui permet
+d'afficher de manière claire les dictionnaires :**
+
+```python
+from pprint import pprint
+
+[...]
+pprint(mon_joli_dictionnaire)
+```
 
 
 4. Écrire une fonction qui retourne la liste de tous les passages de métro à
@@ -108,8 +115,10 @@ annexes appelées par ce code.**
 
 6. En utilisant le service
 [Open Data de Rennes Métropole](https://data.rennesmetropole.fr/), écrivez une
-fonction qui affiche le nombre total de passages de vélos devant chacun des 
-compteurs installés dans Rennes, pour le mois de novembre 2021.
+fonction qui affiche le nombre total de passages de vélos (même si le nom du jeu de données 
+sous-entend qu'il fournit des infos sur les passages de vélos et de piétons, seuls les vélos 
+sont comptés) devant chacun des 
+compteurs installés dans Rennes (attribut `name`), pour le mois de novembre 2021.
 Notez que dans l'interface utilisée, pour filtrer une date par mois 
 (c'est-à-dire ne conserver que les enregistrements pour le mois `MM` de l'année 
 `YYYY`), on peut demander que l'attribut `date` soit de la forme : `YYYY/MM`,
