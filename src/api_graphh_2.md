@@ -52,14 +52,13 @@ Ici, on suppose que l'on souhaite faire du sport et que, pour un sport donné, o
 
 La question peut par exemple être posée sous la forme suivante :
 
-> Voici ma liste de contacts :
-> * Pauline, joue au tennis, se trouve "Place du recteur Henri Le Moal, Rennes, France"
-> * Ernest, joue au football, se trouve "Place du Parlement de Bretagne, Rennes, France"
-> * Felix, joue au tennis, se trouve "Rue Lebastard, Rennes, France"
-> * Sarah, joue au football, se trouve "Place du Parlement de Bretagne, Rennes, France"
-> * Ingrid, pratique la course à pied, se trouve "Mail François Mitterrand, Rennes, France"
-> 
-> Sachant que je me trouve Place de la République à Rennes, quel est, dans ma liste de contacts, celui ou celle qui se trouve le plus proche de moi et qui joue au tennis ?
+> * Voici ma liste de contacts :
+>   * Pauline, joue au tennis, se trouve "Place du recteur Henri Le Moal, Rennes, France"
+>   * Ernest, joue au football, se trouve "Place du Parlement de Bretagne, Rennes, France"
+>   * Felix, joue au tennis, se trouve "Rue Lebastard, Rennes, France"
+>   * Sarah, joue au football, se trouve "Place du Parlement de Bretagne, Rennes, France"
+>   * Ingrid, pratique la course à pied, se trouve "Mail François Mitterrand, Rennes, France"
+> * Sachant que je me trouve Place de la République à Rennes, quel est, dans ma liste de contacts, celui ou celle qui se trouve le plus proche de moi et qui joue au tennis ?
 
 3. Écrivez une fonction qui prend en entrée :
     * une position (représentée par une chaîne de caractères)
