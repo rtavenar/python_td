@@ -33,12 +33,12 @@ La question peut par exemple être posée sous la forme suivante :
 
 ## Où se retrouver ?
 
-Plusieurs ami(e)s souhaitent se retrouver, tout en minimisant leur temps de trajet.
+Plusieurs ami(e)s souhaitent se retrouver, tout en minimisant leur distance de trajet.
 Plus précisément, ils souhaitent que **la somme des distances parcourues par eux tous pour se retrouver soit la plus faible possible**.
 
 La question peut par exemple être posée sous la forme suivante :
 
-> Pour trois amis habitant respectivement Paris, Auxerre et Lyon, est-il préférable (selon le critère énoncé ci-dessus en gras) de se rencontrer à Rennes ou à Strasbourg ?
+> Pour trois amis habitant respectivement "Paris, 12ème arrondissement", "Auxerre" et "Lyon, 1er arrondissement", est-il préférable (selon le critère énoncé ci-dessus en gras) de se rencontrer à Rennes ou à Strasbourg ?
 
 2. Écrivez une fonction qui prend en entrée :
     * une liste de positions des amis (chaque position étant représentée par une chaîne de caractères)
