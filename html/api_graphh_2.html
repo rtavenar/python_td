@@ -106,7 +106,7 @@
 <li>une liste d’options sur le trajet (sous la forme d’une liste de chaînes de caractères)</li>
 <li>un client d’API GraphHopper</li>
 </ul>
-et retourne l’option correspondant au trajet le plus court (en temps).</li>
+et retourne l’option correspondant au trajet le plus court (en temps). En cas d’égalité, votre fonction retournera l’une des options correspondant au trajet le plus court (en temps).</li>
 </ol>
 <h2 data-number="1.2" id="où-se-retrouver"><span class="header-section-number">1.2</span> Où se retrouver ?</h2>
 <p>Plusieurs ami(e)s souhaitent se retrouver, tout en minimisant leur temps de trajet. Plus précisément, ils souhaitent que <strong>la somme des distances parcourues par eux tous pour se retrouver soit la plus faible possible</strong>.</p>
@@ -121,7 +121,7 @@ et retourne l’option correspondant au trajet le plus court (en temps).</li>
 <li>une liste de lieux de rencontres possibles (sous la forme d’une liste de chaînes de caractères)</li>
 <li>un client d’API GraphHopper</li>
 </ul>
-et retourne l’option la plus favorable (par rapport au critère énoncé en gras plus haut).</li>
+et retourne l’option la plus favorable (par rapport au critère énoncé en gras plus haut). En cas d’égalité, votre fonction retournera l’une des options les plus favorables (par rapport au critère énoncé en gras plus haut).</li>
 </ol>
 <h2 data-number="1.3" id="bonus-trouver-un-partenaire-sportif"><span class="header-section-number">1.3</span> Bonus : Trouver un partenaire sportif</h2>
 <p>Ici, on suppose que l’on souhaite faire du sport et que, pour un sport donné, on veut chercher dans une liste de partenaires potentiels celui ou celle qui se trouve le plus proche de nous.</p>
@@ -147,7 +147,7 @@ et retourne l’option la plus favorable (par rapport au critère énoncé en gr
 <li>une activité physique (représentée par une chaîne de caractères)</li>
 <li>un client d’API GraphHopper</li>
 </ul>
-et retourne le nom de la personne dont la localisation est la plus proche de nous et qui pratique le sport voulu.</li>
+et retourne le nom de la personne dont la localisation est la plus proche de nous et qui pratique le sport voulu. En cas d’égalité, votre fonction retournera le nom de l’une des personnes dont la localisation est la plus proche de nous et qui pratique le sport voulu.</li>
 </ol>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>liste_dicos <span class="op">=</span> [</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    {</span>
