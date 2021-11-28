@@ -20,7 +20,7 @@ Dans cette partie, on suppose que l'on cherche à déterminer, parmi plusieurs c
 
 La question peut par exemple être posée sous la forme suivante :
 
-> Lors d'un trajet Rennes - Marseille, vaut-il mieux (en termes de temps de trajet) prendre quelqu'un à Paris, Lyon ou Marseille ?
+> Lors d'un trajet Rennes - Marseille, vaut-il mieux (en termes de temps de trajet) prendre quelqu'un à "Paris 14ème arrondissement", "Lyon 1er arrondissement" ou "Bordeaux" ?
 
 1. Écrivez une fonction qui prend en entrée :
     * un lieu d'origine (sous la forme d'une chaîne de caractères)
@@ -33,7 +33,7 @@ La question peut par exemple être posée sous la forme suivante :
 ## Où se retrouver ?
 
 Plusieurs ami(e)s souhaitent se retrouver, tout en minimisant leur temps de trajet.
-Plus précisément, ils souhaitent que **celui ou celle d'entre eux qui devra faire le plus de chemin n'ait pas un chemin trop important à parcourir** (en distance).
+Plus précisément, ils souhaitent que **la somme des distances parcourues par eux tous pour se retrouver soit la plus faible possible**.
 
 La question peut par exemple être posée sous la forme suivante :
 
@@ -46,7 +46,7 @@ La question peut par exemple être posée sous la forme suivante :
     
    et retourne l'option la plus favorable (par rapport au critère énoncé en gras plus haut).
 
-## Trouver un partenaire (sportif)
+## Bonus : Trouver un partenaire sportif
 
 Ici, on suppose que l'on souhaite faire du sport et que, pour un sport donné, on veut chercher dans une liste de partenaires potentiels celui ou celle qui se trouve le plus proche de nous.
 
