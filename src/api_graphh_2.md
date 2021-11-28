@@ -29,6 +29,7 @@ La question peut par exemple être posée sous la forme suivante :
     * un client d'API GraphHopper
     
    et retourne l'option correspondant au trajet le plus court (en temps).
+   En cas d'égalité, votre fonction retournera l'une des options correspondant au trajet le plus court (en temps).
 
 ## Où se retrouver ?
 
@@ -45,6 +46,7 @@ La question peut par exemple être posée sous la forme suivante :
     * un client d'API GraphHopper
     
    et retourne l'option la plus favorable (par rapport au critère énoncé en gras plus haut).
+   En cas d'égalité, votre fonction retournera l'une des options les plus favorables (par rapport au critère énoncé en gras plus haut).
 
 ## Bonus : Trouver un partenaire sportif
 
@@ -67,6 +69,7 @@ La question peut par exemple être posée sous la forme suivante :
     * un client d'API GraphHopper
     
    et retourne le nom de la personne dont la localisation est la plus proche de nous et qui pratique le sport voulu.
+   En cas d'égalité, votre fonction retournera le nom de l'une des personnes dont la localisation est la plus proche de nous et qui pratique le sport voulu.
 
 ```python
 liste_dicos = [
