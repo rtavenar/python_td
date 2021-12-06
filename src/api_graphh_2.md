@@ -20,7 +20,7 @@ Dans cette partie, on suppose que l'on cherche à déterminer, parmi plusieurs c
 
 La question peut par exemple être posée sous la forme suivante :
 
-> Lors d'un trajet Rennes - Marseille, vaut-il mieux (en termes de temps de trajet) prendre quelqu'un à Paris, Lyon ou Marseille ?
+> Lors d'un trajet Rennes - Marseille, vaut-il mieux (en termes de temps de trajet) prendre quelqu'un à "Paris 14ème arrondissement", "Lyon 1er arrondissement" ou "Bordeaux" ?
 
 1. Écrivez une fonction qui prend en entrée :
     * un lieu d'origine (sous la forme d'une chaîne de caractères)
@@ -29,15 +29,16 @@ La question peut par exemple être posée sous la forme suivante :
     * un client d'API GraphHopper
     
    et retourne l'option correspondant au trajet le plus court (en temps).
+   En cas d'égalité, votre fonction retournera l'une des options correspondant au trajet le plus court (en temps).
 
 ## Où se retrouver ?
 
-Plusieurs ami(e)s souhaitent se retrouver, tout en minimisant leur temps de trajet.
-Plus précisément, ils souhaitent que **celui ou celle d'entre eux qui devra faire le plus de chemin n'ait pas un chemin trop important à parcourir** (en distance).
+Plusieurs ami(e)s souhaitent se retrouver, tout en minimisant leur distance de trajet.
+Plus précisément, ils souhaitent que **la somme des distances parcourues par eux tous pour se retrouver soit la plus faible possible**.
 
 La question peut par exemple être posée sous la forme suivante :
 
-> Pour trois amis habitant respectivement Paris, Auxerre et Lyon, est-il préférable (selon le critère énoncé ci-dessus en gras) de se rencontrer à Rennes ou à Strasbourg ?
+> Pour trois amis habitant respectivement "Paris, 12ème arrondissement", "Auxerre" et "Lyon, 1er arrondissement", est-il préférable (selon le critère énoncé ci-dessus en gras) de se rencontrer à Rennes ou à Strasbourg ?
 
 2. Écrivez une fonction qui prend en entrée :
     * une liste de positions des amis (chaque position étant représentée par une chaîne de caractères)
@@ -45,8 +46,9 @@ La question peut par exemple être posée sous la forme suivante :
     * un client d'API GraphHopper
     
    et retourne l'option la plus favorable (par rapport au critère énoncé en gras plus haut).
+   En cas d'égalité, votre fonction retournera l'une des options les plus favorables (par rapport au critère énoncé en gras plus haut).
 
-## Trouver un partenaire (sportif)
+## Bonus : Trouver un partenaire sportif
 
 Ici, on suppose que l'on souhaite faire du sport et que, pour un sport donné, on veut chercher dans une liste de partenaires potentiels celui ou celle qui se trouve le plus proche de nous.
 
@@ -67,6 +69,7 @@ La question peut par exemple être posée sous la forme suivante :
     * un client d'API GraphHopper
     
    et retourne le nom de la personne dont la localisation est la plus proche de nous et qui pratique le sport voulu.
+   En cas d'égalité, votre fonction retournera le nom de l'une des personnes dont la localisation est la plus proche de nous et qui pratique le sport voulu.
 
 ```python
 liste_dicos = [
