@@ -33,7 +33,8 @@ def dates_notes(restaurants):
     liste_valeurs_dates= []
     for restaurant in restaurants:
         for note in restaurant["grades"]:
-            liste_valeurs_dates.append(note["date"])
+            if note["grade"] == "B":
+                liste_valeurs_dates.append(note["date"])
     return set(liste_valeurs_dates)
 
 def restaurants_grades_a_plat(restaurants):
@@ -68,36 +69,36 @@ def export_json_to_csv(restaurants, nom_fichier_csv):
             csvfp.writerow(r)
 
 # Section 3 : Tests de fonctions définies et manipulations en mode "script"
+if __name__ == "__main__":
+    # 2 Extraction d’informations élémentaires
+    # Q1
+    dossier = "data"
+    nom_fichier = "NYfood.json"
+    restaurants = lecture_json(dossier, nom_fichier)
+    print(len(restaurants))
+    # Q2
+    print(lexique_critere(restaurants, "cuisine"))
+    # Q3
+    print(restaurants_A(restaurants))
+    # Q4
+    affiche_restaurants_S(restaurants)
+    # Q5
+    n = 0
+    for resto in restaurants:
+        if resto["address"]["zipcode"].startswith("10"):
+            n += 1
+    print(f"Le nombre de restaurants dont le code postal commence par 10 est {n}")
+    # Q6
+    print(dates_notes(restaurants))
+    # Q7
+    print(compte_par_cuisine(restaurants))
 
-# 2 Extraction d’informations élémentaires
-# Q1
-dossier = "data"
-nom_fichier = "NYfood.json"
-restaurants = lecture_json(dossier, nom_fichier)
-print(len(restaurants))
-# Q2
-print(lexique_critere(restaurants, "cuisine"))
-# Q3
-print(restaurants_A(restaurants))
-# Q4
-affiche_restaurants_S(restaurants)
-# Q5
-n = 0
-for resto in restaurants:
-    if resto["address"]["zipcode"].startswith("10"):
-        n += 1
-print(f"Le nombre de restaurants dont le code postal commence par 10 est {n}")
-# Q6
-print(dates_notes(restaurants))
-# Q7
-print(compte_par_cuisine(restaurants))
-
-# 3 Export au format CSV
-# Q1
-restaurants = restaurants_grades_a_plat(restaurants)
-print(restaurants[:2])
-# Q2
-restaurants = restaurants_adresse_a_plat(restaurants)
-print(restaurants[:2])
-# Q3
-export_json_to_csv(restaurants, "restaurants.csv")
+    # 3 Export au format CSV
+    # Q1
+    restaurants = restaurants_grades_a_plat(restaurants)
+    print(restaurants[:2])
+    # Q2
+    restaurants = restaurants_adresse_a_plat(restaurants)
+    print(restaurants[:2])
+    # Q3
+    export_json_to_csv(restaurants, "restaurants.csv")

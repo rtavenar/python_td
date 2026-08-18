@@ -52,7 +52,7 @@ Si une majorité de ces individus est de la classe `"F"` (sexe féminin), on pr�
 ## Préparation de votre projet Python
 
 Pour ce projet, vous allez créer un nouveau sous-dossier `Projets` dans votre dossier `M1_S1_Python`, et ouvrir le dossier `Projets` dans VS Code (Menu Fichier -> Nouvelle fenêtre puis "Ouvrir un dossier").
-Dans ce dossier `Projets`, vous allez télécharger le fichier [`P01_utils.py`](https://raw.githubusercontent.com/rtavenar/m1_python_ur2/main/modules_fournis/P01_utils.py) et créer un nouveau fichier `P01.py` dans lequel vous coderez.
+Dans ce dossier `Projets`, vous allez télécharger le fichier [`P01_utils.py`](https://raw.githubusercontent.com/rtavenar/python_td/main/modules_fournis/P01_utils.py) et créer un nouveau fichier `P01.py` dans lequel vous coderez.
 
 ## Récupération et visualisation des données
 

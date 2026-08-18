@@ -50,34 +50,35 @@ def pangramme(phrase):
     return (len(phrase_set) == 26 and " " not in phrase_set) or (len(phrase_set) == 27 and " " in phrase_set)
 
 # Section 3 : Tests de fonctions définies et manipulations en mode "script"
-#2 Les dictionnaires
-#Q1
-test_texte = "Dès Noël où un zéphyr haï me vêt de glaçons würmiens, je dîne d’exquis rôtis de bœuf au kir à l’aÿ d’âge mûr et cætera!"
-print(normalise_texte(test_texte))
+if __name__ == "__main__":
+    #2 Les dictionnaires
+    #Q1
+    test_texte = "Dès Noël où un zéphyr haï me vêt de glaçons würmiens, je dîne d’exquis rôtis de bœuf au kir à l’aÿ d’âge mûr et cætera!"
+    print(normalise_texte(test_texte))
 
-#Q2
-test_texte = "Écrire une fonction qui à partir d’une chaîne de caractères passée en argument renvoie un dictionnaire associant chaque mot à son nombre d’occurrences dans la chaîne."
-print(occurence_mot(test_texte))
+    #Q2
+    test_texte = "Écrire une fonction qui à partir d’une chaîne de caractères passée en argument renvoie un dictionnaire associant chaque mot à son nombre d’occurrences dans la chaîne."
+    print(occurence_mot(test_texte))
 
-#Q3
-print(occurence_mot_max(test_texte))
+    #Q3
+    print(occurence_mot_max(test_texte))
 
-#Q41
-ventes = {"Dupont":14, "Hervy":19, "Geoffroy":15, "Layec":21}
-print(total_ventes(ventes))
+    #Q41
+    ventes = {"Dupont":14, "Hervy":19, "Geoffroy":15, "Layec":21}
+    print(total_ventes(ventes))
 
-#Q42
-print(vendeur_vente_max(ventes))
+    #Q42
+    print(vendeur_vente_max(ventes))
 
-#3 Les sets
-#Q1
-print(liste_triee_sans_doublon([2, 5, 8, 3, 2, 4, 12, 7, 5]))
+    #3 Les sets
+    #Q1
+    print(liste_triee_sans_doublon([2, 5, 8, 3, 2, 4, 12, 7, 5]))
 
-#Q2
-print(nb_element_distinct([2, 5, 8, 3, 2, 4, 12, 7, 5]))
+    #Q2
+    print(nb_element_distinct([2, 5, 8, 3, 2, 4, 12, 7, 5]))
 
-#Q3
-phrase1 = "Portez ce vieux whisky au juge blond qui fume"
-phrase2 = "J ai vu un punk afghan et deux clowns aux zygomatiques incroyables"
-print(pangramme(phrase1))
-print(pangramme(phrase2))
+    #Q3
+    phrase1 = "Portez ce vieux whisky au juge blond qui fume"
+    phrase2 = "J ai vu un punk afghan et deux clowns aux zygomatiques incroyables"
+    print(pangramme(phrase1))
+    print(pangramme(phrase2))

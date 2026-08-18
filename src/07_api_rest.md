@@ -76,7 +76,7 @@ Nous allons maintenant enrichir ces données en interrogeant l'[API Open Data NY
 
 > L'URL de base de l'API est : `https://data.cityofnewyork.us/resource/43nn-pn8j.json`
 
-6. Écrire une fonction `fetch_restaurants_par_type` qui prend en entrée un type de cuisine (`cuisine`) et retourne la liste des restaurants de ce type exposés par l'API (attribut `cuisinedescription`), en limitant à 50 résultats. Chaque élément de la liste retournée sera un dictionnaire avec au minimum les clés `camis` (identifiant), `dba` (nom du restaurant) et `zipcode`.
+6. Écrire une fonction `fetch_restaurants_par_type` qui prend en entrée un type de cuisine (`cuisine`) et retourne la liste des restaurants de ce type exposés par l'API (attribut `cuisinedescription`), en limitant à 50 résultats (ajout de la paire clé-valeur `$limit=50` aux paramètres passés à `requests.get`). Chaque élément de la liste retournée sera un dictionnaire avec au minimum les clés `camis` (identifiant), `dba` (nom du restaurant) et `zipcode`.
 
     Assurez-vous d'utiliser `raise_for_status()` dans votre fonction.
 

@@ -62,23 +62,23 @@ def liste_chaine_vers_reel(chaine):
     return [float(chaine_reel) for chaine_reel in chaine.split()]
 
 # Section 3 : Tests de fonctions définies et manipulations en mode "script"
+if __name__ == "__main__":
+    print_sinus()
+    print(plusieurs_tables([2, 5]))
 
-print_sinus()
-print(plusieurs_tables([2, 5]))
+    print(elevation_puissance(2, 17, 2))
+    print(elevation_puissance(-2, 20, 3))
 
-print(elevation_puissance(2, 17, 2))
-print(elevation_puissance(-2, 20, 3))
+    print(elevation_carre(2, 17))
 
-print(elevation_carre(2, 17))
+    print(len_list_str(['Toto', 'Super toto', 'Super Toto est super fort']))
 
-print(len_list_str(['Toto', 'Super toto', 'Super Toto est super fort']))
+    print(liste_triee_sans_doublon([2, 5, 8, 3, 2, 4, 12, 7, 5]))
 
-print(liste_triee_sans_doublon([2, 5, 8, 3, 2, 4, 12, 7, 5]))
+    print(mot_plus_long('Super toto est super fort'))
 
-print(mot_plus_long('Super toto est super fort'))
+    print(liste_entiers_pairs([2, 5, 7, 6]))
 
-print(liste_entiers_pairs([2, 5, 7, 6]))
+    print(liste_plus_trois([2, 5, 7, 6]))
 
-print(liste_plus_trois([2, 5, 7, 6]))
-
-print(liste_chaine_vers_reel("1.0 3.14 7 8.4 0.0"))
+    print(liste_chaine_vers_reel("1.0 3.14 7 8.4 0.0"))

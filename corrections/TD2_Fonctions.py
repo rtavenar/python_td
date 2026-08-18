@@ -72,33 +72,33 @@ def occurrences_A_majuscule(s):
     return occurrences_majuscule(s, "a")
     
 # Section 3 : Tests de fonctions définies et manipulations en mode "script"
+if __name__ == "__main__":
+    # Exercices indépendants
+    # 1.
+    print(compte_mots("la vie est belle"))
 
-# Exercices indépendants
-# 1.
-print(compte_mots("la vie est belle"))
+    # 2.
+    print(est_un_fichier_texte("truc.csv"))
+    print(est_un_fichier_texte("truc.xls"))
 
-# 2.
-print(est_un_fichier_texte("truc.csv"))
-print(est_un_fichier_texte("truc.xls"))
+    # 3.
+    table_multiplication(5, 4, 7)
 
-# 3.
-table_multiplication(5, 4, 7)
+    # 4.
+    print(annees_production())
 
-# 4.
-print(annees_production())
+    # 5.
+    print(date_lendemain(8, 4, 1983))
+    print(date_lendemain(31, 12, 1983))
+    print(date_lendemain(30, 11, 1983))
 
-# 5.
-print(date_lendemain(8, 4, 1983))
-print(date_lendemain(31, 12, 1983))
-print(date_lendemain(30, 11, 1983))
+    # Du cas général au cas particulier
+    # 1.
+    table_multiplication_usuelle(5)
 
-# Du cas général au cas particulier
-# 1.
-table_multiplication_usuelle(5)
+    # 2.
+    print(occurrences_majuscule("La vie est belle", "l"))
 
-# 2.
-print(occurrences_majuscule("La vie est belle", "l"))
-
-# 3.
-print(occurrences_A_majuscule("LA vie est belle Ah ah ah"))
+    # 3.
+    print(occurrences_A_majuscule("LA vie est belle Ah ah ah"))
 

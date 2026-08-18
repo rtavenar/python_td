@@ -1,11 +1,13 @@
-from abc import ABC, abstractmethod, abstractproperty
+# Imports
+from abc import ABC, abstractmethod
 
+# Classes et Fonctions
 class CompteSimple:
     def __init__(self):
         self.solde = 0
-    
+
     def __repr__(self):
-        return f"Le solde du compte est de {self.solde} Euro(s)"
+        return f"Le solde du compte est de {self.solde} Euro(s)."
     
     def enregistrerOperation(self, op):
         self.solde += op
@@ -72,18 +74,20 @@ class IntervalleFerme(IntervalleAbstrait):
         return v >= self.a and v <= self.b
 
 
-c = CompteSimple()
-c.enregistrerOperation(100)
-c.enregistrerOperation(-32)
-print(c)
+# Tests
+if __name__ == "__main__":
+    c = CompteSimple()
+    c.enregistrerOperation(100)
+    c.enregistrerOperation(-32)
+    print(c)
 
-cc = CompteCourant()
-cc.enregistrerOperation(100)
-cc.enregistrerOperation(-32)
-cc.afficherReleve()
-cc.afficherReleveCredits()
-cc.afficherReleveDebits()
-print(cc.solde)
+    cc = CompteCourant()
+    cc.enregistrerOperation(100)
+    cc.enregistrerOperation(-32)
+    cc.afficherReleve()
+    cc.afficherReleveCredits()
+    cc.afficherReleveDebits()
+    print(cc.solde)
 
-print(10 in IntervalleOuvert(10, 20))
-print(10 in IntervalleFerme(10, 20))
+    print(10 in IntervalleOuvert(10, 20))
+    print(10 in IntervalleFerme(10, 20))

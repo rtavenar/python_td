@@ -2,18 +2,21 @@ SRC          := $(wildcard src/*.md)
 # TARGETS_HTML := $(patsubst src/%.md,_build/html/%.html,$(SRC))
 # TARGETS_EPUB := $(patsubst src/%.md,_build/epub/%.epub,$(SRC))
 TARGETS_PDF  := $(patsubst src/%.md,_build/pdf/%.pdf,$(SRC))
-TARGETS      := $(TARGETS_PDF) # $(TARGETS_HTML) $(TARGETS_EPUB)
+TARGETS      := $(TARGETS_PDF) # $(TARGETS_HTML) $(TARGETS_EPUB) 
 
 all: $(TARGETS)
 
-# _build/html/%.html: src/%.md
-# 	pandoc --self-contained -s -o $@ --resource-path src/ --highlight-style pygments --columns 1000 --css assets/td.css --ascii --number-sections --mathml $^
+_build/html/%.html: src/%.md
+	mkdir -p _build/html
+	pandoc --standalone -s -o $@ --resource-path src/ --highlight-style pygments --columns 1000 --css assets/td.css --ascii --number-sections --mathml $^
 
-# _build/epub/%.epub: src/%.md
-# 	pandoc -o $@ --resource-path src/ --columns 1000 --number-sections --css assets/td_epub.css --mathml $^
+_build/epub/%.epub: src/%.md
+	mkdir -p _build/epub
+	pandoc -o $@ --resource-path src/ --columns 1000 --number-sections --css assets/td_epub.css --mathml $^
 
 _build/pdf/%.pdf: src/%.md
-	pandoc -V lang=fr -o $@ --resource-path src/ --columns 1000 --variable urlcolor=cyan --number-sections $^
+	mkdir -p _build/pdf
+	pandoc -V lang=fr -o $@ --resource-path src/ --template assets/custom-eisvogel.tex --listings --variable listings-disable-line-numbers=True --columns 1000 --variable urlcolor=cyan --number-sections --pdf-engine=xelatex $^
 
 clean:
 	rm -f $(TARGETS)

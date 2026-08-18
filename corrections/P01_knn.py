@@ -2,7 +2,7 @@ import math
 import numpy as np
 from scipy.spatial.distance import cdist
 
-from P01_utils import lire_donnees
+from P01_utils import lire_donnees, lire_donnees_numpy
 
 
 def argsort(seq):
@@ -38,7 +38,7 @@ def plus_frequent(liste):
     return valeur_max_freq
 
 
-def k_plus_proches_voisins_list(X_train, y_train, X_test, k=1):
+def k_plus_proches_voisins_liste(X_train, y_train, X_test, k=1):
     predicted_labels = []
     for Xi in X_test:
         indices = indice_k_plus_proches(Xi, X_train, k)
@@ -47,7 +47,7 @@ def k_plus_proches_voisins_list(X_train, y_train, X_test, k=1):
     return predicted_labels
 
 
-def k_plus_proches_voisins_npy(X_train, y_train, X_test, k=1):
+def k_plus_proches_voisins_numpy(X_train, y_train, X_test, k=1):
     all_distances = cdist(X_test, X_train)
     all_knn_indices = np.argsort(all_distances, axis=1)[:, :k]
     all_knn_labels = y_train[all_knn_indices]
@@ -63,11 +63,16 @@ X_train, y_train = lire_donnees(100)
 X_test, y_test = lire_donnees(10)
 
 # Version 1 : pur python
-y_pred_list = k_plus_proches_voisins_list(X_train, y_train, X_test, k=3)
+y_pred_liste = k_plus_proches_voisins_liste(X_train, y_train, X_test, k=3)
 
 # Version 2 : numpy
-y_pred_npy = k_plus_proches_voisins_npy(X_train, y_train, X_test, k=3)
+X_train_npy, y_train_npy = lire_donnees_numpy(100)
+X_test_npy, y_test_npy = lire_donnees_numpy(10)
+y_pred_npy = k_plus_proches_voisins_numpy(X_train_npy, y_train_npy, X_test_npy, k=3)
 
 # Affichage
-for yi, yi_pred_list, yi_pred_npy in zip(y_test, y_pred_list, y_pred_npy):
-    print(f"Vraie classe : {yi}, classe prédite (version liste) : {yi_pred_list}, classe prédite (version numpy): {yi_pred_npy}")
+for yi, yi_pred_liste in zip(y_test, y_pred_liste):
+    print(f"Vraie classe : {yi}, classe prédite (version liste) : {yi_pred_liste}")
+
+for yi, yi_pred_npy in zip(y_test_npy, y_pred_npy):
+    print(f"Vraie classe : {yi}, classe prédite (version numpy) : {yi_pred_npy}")
