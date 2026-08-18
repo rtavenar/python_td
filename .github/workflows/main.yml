@@ -23,10 +23,10 @@ jobs:
       run: |
         sudo apt-get install texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-xetex latexmk texlive-lang-french
 
-    # Build the html, pdf and epub versions
-    - name: Build the html, pdf and epub
+    # Build the pdf version
+    - name: Build the pdf
       run: |
-        mkdir -p _build/html _build/pdf _build/epub
+        mkdir -p _build/pdf
         make all
 
     - name: GitHub Pages action

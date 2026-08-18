@@ -1,2 +1,4 @@
 .DS_Store
 _build/
+src/SESS2*.md
+src/CC*.md
