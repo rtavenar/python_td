@@ -75,7 +75,7 @@ N'hésitez pas à aller vous mesurer aux défis qui y sont proposés de temps en
 
     Calculez la matrice de Cauchy $C$ définie comme $$C_{ij} = \frac{1}{x_i - y_j} \,\, .$$
 
-4. Générez une matrice aléatoire de taille $10\times 3$ et standardisez-la pour que la moyenne de chacune de ses lignes soit égale à 0.
+4. Générez une matrice aléatoire de taille $10\times 3$ de valeurs tirées dans une loi uniforme sur $[0, 1]$ et standardisez-la pour que la moyenne de chacune de ses lignes soit égale à 0.
 
 # Exercice de synthèse
 
